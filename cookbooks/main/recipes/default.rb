@@ -124,7 +124,7 @@
 #include_recipe "postgresql_maintenance"
 
 #enable Extension modules for a given Postgresql database
-# if ['solo','db_master', 'db_slave'].include?(node[:instance_role])
+if ['solo','db_master', 'db_slave'].include?(node[:instance_role])
   # Extensions that support Postgres >= 9.0
   # postgresql9_autoexplain "dbname"
   # postgresql9_btree_gin "dbname"
@@ -137,7 +137,7 @@
   # postgresql9_dict_xsyn "dbname"
   # postgresql9_earthdistance "dbname"
   # postgresql9_fuzzystrmatch "dbname"
-  # postgresql9_hstore "dbname"
+  postgresql9_hstore "asgard_production"
   # postgresql9_intarray "dbname"
   # postgresql9_isn "dbname"
   # postgresql9_lo "dbname"
@@ -171,7 +171,7 @@
   # Admin-Level Contribs
   # postgresql9_pg_buffercache "postgres"
   # postgresql9_pg_freespacemap "postgres"
-# end
+end
 
 #uncomment to include the motd customization related to the environment
 #include_recipe "env_motd"
