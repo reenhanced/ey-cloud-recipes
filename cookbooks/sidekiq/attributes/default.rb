@@ -8,7 +8,7 @@ default[:sidekiq] = {
   # unless a utility name is set, in which case, Sidekiq will
   # only be installed on to a utility instance that matches
   # the name
-  #:utility_name => 'redis',
+  :utility_name => 'redis',
   
   # Number of workers (not threads)
   :workers => 2,
