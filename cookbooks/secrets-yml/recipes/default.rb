@@ -8,7 +8,7 @@ if ['app_master', 'app', 'util', 'solo'].include?(node[:instance_role])
       backup 0
       # Pass a hash of variables to the method below and they will be available as local variables in the template.
       # For API keys this is usually completely unnecessary
-      variables app: app, node: node
+      variables app: app
     end
   end
 end
