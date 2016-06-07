@@ -10,5 +10,9 @@ if ['app_master', 'app', 'util', 'solo'].include?(node[:instance_role])
       # For API keys this is usually completely unnecessary
       variables app: app
     end
+
+    link "/data/#{app}/current/config/secrets.yml" do
+      to "/data/#{app}/shared/config/secrets.yml"
+    end
   end
 end
